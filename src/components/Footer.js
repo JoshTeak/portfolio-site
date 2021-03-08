@@ -5,42 +5,20 @@ export const Footer = () => (
   <footer className="footer">
     <div className="footer__content">
       <div className="footer__links">
-        <div className="footer__links-group">
-          <button className="button button--link" onClick={() => {
-            if(history.location.pathname !== "/aboutme")
-            {
-              history.push({
-                pathname: "/aboutme",
-                state: { previousPath: history.location}
-              });
-              this.forceUpdate();
+        <a className="selectable" onClick={() => { 
+            return (
+              window.open('https://www.linkedin.com/in/josh-londt-764064116','mywindow1')
+              )
             }
-          }}>About Me</button>
-          <button className="button button--link" onClick={() => {
-            if(history.location.pathname !== "/projects")
-            {
-              history.push({
-                pathname: "/projects",
-                state: { previousPath: history.location}
-              });
-              this.forceUpdate();
+          }
+        >LinkedIn</a>
+        <a className="selectable" onClick={() => { 
+            return (
+              window.open('https://github.com/JoshTeak','mywindow1')
+              )
             }
-          }}>Projects</button>
-          <button className="button button--link" onClick={() => {
-            if(history.location.pathname !== "/contact")
-            {
-              history.push({
-                pathname: "/contact",
-                state: { previousPath: history.location}
-              });
-              this.forceUpdate();
-            }
-          }}>Contact</button>
-        </div>
-        <div className="footer__links-group">
-          <a href="https://www.linkedin.com/in/josh-londt-764064116/">LinkedIn</a>
-          <a href="https://github.com/JoshTeak">GitHub</a>
-        </div>
+          }
+        >GitHub</a>
       </div>
     </div>
   </footer>

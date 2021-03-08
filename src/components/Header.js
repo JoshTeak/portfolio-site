@@ -14,7 +14,7 @@ class Header extends React.Component {
             <div className="header__links-group">
               {
                 history.location.pathname !== "/aboutme"? 
-                <button className="button button--link" onClick={() => {
+                <button className="button button--link selectable" onClick={() => {
                   if(history.location.pathname !== "/aboutme")
                   {
                     history.push({
@@ -27,7 +27,7 @@ class Header extends React.Component {
               }
             </div>
             <div className="header__links-group">
-              <button className="button button--link" onClick={() => {
+              <button className="button button--link selectable" onClick={() => {
                 if(history.location.pathname !== "/projects")
                 {
                   history.push({
@@ -37,7 +37,7 @@ class Header extends React.Component {
                   this.forceUpdate();
                 }
               }}>Projects</button>
-              <button className="button button--link" onClick={() => {
+              <button className="button button--link selectable" onClick={() => {
                 if(history.location.pathname !== "/contact")
                 {
                   history.push({

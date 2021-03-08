@@ -1,6 +1,7 @@
 .footer {
   margin-top: 10rem;
   height: 20rem;
+  background-color: #fff8f0;
 }
 
 .footer__content {
@@ -26,7 +27,9 @@
   justify-content: space-around;
 }
 
-.footer__links-group {
-  flex-direction: column;
-  display: flex;
+.footer__links a {
+  padding: 0.3rem;
+  color: #656565;
+  text-decoration: none;
+  background-color: #fff8f0;
 }

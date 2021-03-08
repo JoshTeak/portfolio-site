@@ -18,23 +18,26 @@
 }
 
 .content-block-item {
-	border-bottom: solid #eeeef1;
-    background: #f0f2ff;
+    background: #fff8f0;
+    margin-bottom: $m-size;
 }
 
 .content-item {
 	margin-right: 3rem;
 	max-width: 30rem;
 	min-width: 25rem;
+	background-color: white;
 }
 
 .content-item-panel {
-	max-width: 26vw;
+	max-width: 37vw;
 	min-width: 30rem;
 	background: white;
+	padding: $m-size;
 }
 
 .content-item-panel p {
+	padding-bottom: $m-size;
 	margin: 0;
 }
 
@@ -48,5 +51,4 @@
 }
 
 .item-left{
-	background: white;
 }

@@ -16,13 +16,23 @@ class AboutMePage extends React.Component {
           <img className="summary-img" />
         </div>
         <div className="content-block">
-          <h2>Projects</h2>
+          <h1>Projects</h1>
           <div className="content-block-row">
-            <div className="content-item">
-              <h3>Education Us</h3>
+            <div className="content-item selectable" onClick={() => { 
+              return (
+                window.open('https://curriculum-aides.herokuapp.com','mywindow1')
+                )
+              }
+            }>
+              <h3>Curriculum Aide</h3>
               <p>Education Us is a lesson sharing web application for teachers. The application was created using JavaScript and React. All database storage is done using firebase</p>
             </div>
-            <div className="content-item">
+            <div className="content-item selectable" onClick={() => { 
+              return (
+                window.open('https://limitless-castle-94218.herokuapp.com','mywindow2')
+                )
+              }
+            }>
               <h3>Recommend Me</h3>
               <p>Recommend Me is a movie recommendation web application. The application was created using JavaScript and React. All database storage is done using firebase</p>
             </div>

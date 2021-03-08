@@ -45,7 +45,7 @@ class ContactPage extends React.Component {
 		return (
 			<div className="content-container">
 				<div className="page-header">
-					<h2 className="page-header__title">Contact</h2>
+					<h1 className="page-header__title">Contact</h1>
 				</div>
 				<form className="form">
 					<div className="input-body">

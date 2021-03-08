@@ -30,3 +30,8 @@ button:disabled {
 	height: 50rem;
 	width: 100%;
 }
+
+.selectable:hover{
+  filter: contrast(0.9);
+  cursor: pointer;
+}
