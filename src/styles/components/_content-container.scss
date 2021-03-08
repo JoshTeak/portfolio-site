@@ -1,5 +1,52 @@
 .content-container {
-  margin: 0 auto;
-  padding: 0 $m-size;
-  max-width: 80rem;
+  	max-width: 118rem;
+	margin: 0 auto;
+}
+
+.content-block {
+	margin-left: 3rem;
+}
+
+.content-block-column {
+}
+
+.content-block-row {
+	display: flex;
+	@media (max-width: $desktop-breakpoint) {
+	    flex-direction: column;
+	}
+}
+
+.content-block-item {
+	border-bottom: solid #eeeef1;
+    background: #f0f2ff;
+}
+
+.content-item {
+	margin-right: 3rem;
+	max-width: 30rem;
+	min-width: 25rem;
+}
+
+.content-item-panel {
+	max-width: 26vw;
+	min-width: 30rem;
+	background: white;
+}
+
+.content-item-panel p {
+	margin: 0;
+}
+
+.content-item-panel h3 {
+	margin: 0;
+}
+
+.item-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.item-left{
+	background: white;
 }

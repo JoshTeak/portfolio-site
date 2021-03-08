@@ -1,23 +1,58 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { startLogout } from '../actions/auth';
+import { history } from '../routers/AppRouter';
 
-export const Header = ({ startLogout }) => (
-  <header className="header">
-    <div className="content-container">
-      <div className="header__content">
-        <Link className="header__title" to="/dashboard">
-          <h1>Boilerplate</h1>
-        </Link>
-        <button className="button button--link" onClick={startLogout}>Logout</button>
-      </div>
-    </div>
-  </header>
-);
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  };
 
-const mapDispatchToProps = (dispatch) => ({
-  startLogout: () => dispatch(startLogout())
-});
+  render() {
+    return (
+      <header className="header">
+        <div className="header__content">
+          <div className="header__links">
+            <div className="header__links-group">
+              {
+                history.location.pathname !== "/aboutme"? 
+                <button className="button button--link" onClick={() => {
+                  if(history.location.pathname !== "/aboutme")
+                  {
+                    history.push({
+                      pathname: "/aboutme",
+                      state: { previousPath: history.location}
+                    });
+                    this.forceUpdate();
+                  }
+                }}>Josh Londt</button> : ""
+              }
+            </div>
+            <div className="header__links-group">
+              <button className="button button--link" onClick={() => {
+                if(history.location.pathname !== "/projects")
+                {
+                  history.push({
+                    pathname: "/projects",
+                    state: { previousPath: history.location}
+                  });
+                  this.forceUpdate();
+                }
+              }}>Projects</button>
+              <button className="button button--link" onClick={() => {
+                if(history.location.pathname !== "/contact")
+                {
+                  history.push({
+                    pathname: "/contact",
+                    state: { previousPath: history.location}
+                  });
+                  this.forceUpdate();
+                }
+              }}>Contact</button>
+            </div>
+          </div>
+        </div>
+      </header>
+    )
+  }
+};
 
-export default connect(undefined, mapDispatchToProps)(Header);
+export default Header;

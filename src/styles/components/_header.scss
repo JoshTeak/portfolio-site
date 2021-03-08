@@ -1,12 +1,13 @@
 .header {
-  background: $dark-blue;
+  height: 11rem;
 }
 
 .header__content {
-  align-items: center;
+  margin: 0 auto;
+  max-width: 118rem;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: $s-size 0;
+  align-items: center;
 }
 
 .header__title {
@@ -15,4 +16,10 @@
   h1 {
     margin: 0;
   }
+}
+
+.header__links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
